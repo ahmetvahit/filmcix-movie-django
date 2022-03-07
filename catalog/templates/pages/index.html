@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid"style="padding-top:5px;padding-bottom:5px;background-color:white;">
+    <div class="container">
+        <h1 class="display-4">Film İzle</h1>
+        <img class="lead"src="{% static 'img/anasayfa.png' %}" alt="">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="card-img" src="{% static 'img/shaza.jpg' %}"style="margin: auto;" alt="">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-body">
+                        <div class="card-title">Shazam</div>
+                        <p class="card-text">
+                            Kaptan Pengu ve Arkadaşları 2, kuraklık, okyanus ve denizlerde yaşamı tehdit eden kirlilik, iklim değişikliği, doğal afetlerin artışı gibi sorunlarla ilgilenen, Kaptan Pengu önderliğindeki grubun yaşadıklarını konu ediyor. İnci Koyu'nda sürekli çöp toplamak zorunda kalan Maki, bu duruma bir çözüm bulmak ister. Bir yardım talebinde bulunmaya karar veren Maki, bunu bir müzik festivali düzenleyerek gerçekleştirmeye karar verir. Kahramanlar, bu süreçte başlarına gelen maceraların üstesinden gelerek unutulmaz bir müzik grubu kurar ve tüm sorunları çözecek bir planı uygulamaya başlar.
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">3 days ago</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="card-img" src="{% static 'img/2.jpg' %}" alt="">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-body">
+                        <div class="card-title">Amazing Grace Aretha Franklin</div>
+                        <p class="card-text">
+                            Amazing Grace, 2018 yılında kaybettiğimiz sevilen müzisyen Aretha Franklin'in hayatına odaklanıyor. Belgeselde, 1972 yılında Aretha Franklin'in Los Angeles'taki New Bethel Baptist Kilisesi'nde verdiği görkemli konser gözler önüne seriliyor
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">3 days ago</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="card-img" src="{% static 'img/3.jpg' %}" alt="">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-body">
+                        <div class="card-title">High Life</div>
+                        <p class="card-text">
+                            Ömür boyu hapis cezasına çarptırılan bir grup suçlunun, bu cezayı almamaları için önlerinde bir seçenek vardır; ölümle sonuçlanabilecek bir deneye katılmak. Bu şansı kullanan suçlular, uzayda gerçekleştirilecek insan üreme deneyinin bir parçası olurlar.
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">3 days ago</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

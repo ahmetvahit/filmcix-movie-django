@@ -1,0 +1,74 @@
+<header>                         <!---bg-primary --->
+        <div class="navbar navbar-expand-sm    navbar-dark"style="background-color:#212529;">
+            <div class="container"style="max-width: 1250px;">
+                <a href="{% url 'index' %}"style="margin-left:-30px;font-size:3.5rem;" class="navbar-brand">FilmCix</a>
+                <ul class="navbar-nav mr-auto"style="margin-left:100px;">
+                    <li
+                        {% if request.path == '/' %}
+                            class="nav-item active"
+                        {% else %}
+                            class="nav-item"
+                        {% endif %}
+                    >
+                        <a  href="{% url 'index' %}"style="padding-right:30px;" class="nav-link">Home</a>
+                    </li>
+                    <li
+                        {% if 'about' in request.path %}
+                            class="nav-item active"
+                        {% else %}
+                             class="nav-item"
+                        {% endif %}                    
+                    >
+                        <a  href="{% url 'about' %}"style="padding-right:30px;"  class="nav-link">About</a>
+                    </li>
+                    <li 
+                        {% if 'movies' in request.path %}
+                            class="nav-item active"
+                        {% else %}
+                            class="nav-item"
+                        {% endif %} 
+                        >
+                        <a  href="{% url 'movies' %}"style="padding-right:30px;" class="nav-link">Movies</a>
+                    </li>
+                    <div class="input-group rounded"style="padding-left:70px;">
+                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <span class="input-group-text border-0" id="search-addon">
+                          <i class="fas fa-search"></i>
+                        </span>
+                      </div>
+                </ul>
+                <ul class="navbar-nav">
+
+                    {% if user.is_authenticated %}    
+                        <li class="nav-item">
+                             <a  href="javascript:{document.getElementById('logout').submit()}" class="nav-link">({{ user.username }}) Logout</a>
+                             <form action="{% url 'logout' %}" method="POST" id="logout">
+                                 {%csrf_token%}
+                                  <input type="hidden">  
+                             </form>
+                        </li>  
+                    {% else %}
+                        <li 
+                        {% if 'login' in request.path %} 
+                            class="nav-item active"
+                        {% else %}
+                            class="nav-item"
+                        {% endif %}
+                        >
+                        <a  href="{% url 'login' %}"style="padding-left:70px;" class="nav-link">Login</a>
+                    </li>  
+                    <li 
+                        {% if 'register' in request.path %} 
+                            class="nav-item active"
+                        {% else %}
+                            class="nav-item"
+                        {% endif %}
+                    >
+                    <a  href="{% url 'register' %}"style="padding-right:-60px;" class="nav-link">Register</a>
+
+                    {% endif %}                  
+                     
+                </ul>
+            </div>
+        </div>
+</header>
